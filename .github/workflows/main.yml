@@ -1,8 +1,9 @@
 name: Build
-on: push
-
+on:
+  push:
+    branches: 
+      - main
 jobs:
- 
   sonarqube:
     name: SonarQube Scan
     runs-on: ubuntu-latest
