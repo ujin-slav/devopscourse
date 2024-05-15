@@ -1,8 +1,9 @@
-name: Build
+name: Build1
 on:
   push:
-    branches: 
+    branches:
       - main
+  workflow_dispatch:
 jobs:
   sonarqube:
     name: SonarQube Scan
