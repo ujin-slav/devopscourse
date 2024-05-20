@@ -38,5 +38,10 @@ pipeline {
                 sh "npm install"
             }
         }
+         stage('Send Test Email') {
+            steps {
+                mail(body: 'This email was sent by a test Jenkins Pipeline job, using Gmail SMTP.', subject: 'Jenkins Pipeline job email', to: 'ujin_slav@mail.ru')
+            }
+        }
     }
 }
