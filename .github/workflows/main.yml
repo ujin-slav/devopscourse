@@ -92,7 +92,7 @@ jobs:
           git config --global user.email "ujin_slav@mail.ru"
           git config --global user.name "ujin-slav"
           echo ${{ github.sha }}
-          sed -i "s#${{ github.actor }}.*#${{ github.actor }}/gitops01:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#ujinslav/gitops01/gitops01:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -am "Update image for - ${{ github.sha }}"
       - run: echo ${{ github }}
